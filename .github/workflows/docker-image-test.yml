@@ -24,4 +24,4 @@ jobs:
     
     - uses: actions/checkout@v3  
     - name: Build the Docker CM image
-      run: docker build . --file examples/helix-basic-aspnetcore/Dockerfile --tag my-image-name:$(date +%s) --build-args BASE_IMAGE=mcr.microsoft.com/windows/nanoserver:1809 --build-args BUILD_IMAGE=mcr.microsoft.com/dotnet/core/sdk:3.1      
+      run: docker build . --file examples/helix-basic-aspnetcore/Dockerfile --tag my-image-name:$(date +%s) --build-arg BASE_IMAGE=mcr.microsoft.com/windows/nanoserver:1809 --build-arg BUILD_IMAGE=mcr.microsoft.com/dotnet/core/sdk:3.1      
