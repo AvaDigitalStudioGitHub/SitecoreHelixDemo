@@ -17,8 +17,10 @@ jobs:
         with:          
           tokenPrefix:  '#{'         
           tokenSuffix:  '}#'          
-          files:  '["**/*.js"]' 
+          files:  '["**/*.Dockerfile"]' 
         env:
+          BUILD_IMAGE: mcr.microsoft.com/dotnet/core/sdk:3.1
+          BASE_IMAGE: mcr.microsoft.com/windows/nanoserver:1809
          
       - uses: actions/checkout@v3
       - name: Build the Docker CM image
